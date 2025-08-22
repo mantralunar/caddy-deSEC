@@ -1,7 +1,7 @@
 FROM caddy:builder-alpine AS builder
 
 RUN xcaddy build \
-    --with /github.com/caddy-dns/desec
+    --with github.com/caddy-dns/desec
 
 FROM caddy:alpine
 
