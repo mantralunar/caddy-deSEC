@@ -1,3 +1,4 @@
+LABEL org.opencontainers.image.source https://github.com/mantralunar/caddy-dynu
 FROM caddy:builder-alpine AS builder
 
 RUN xcaddy build \
