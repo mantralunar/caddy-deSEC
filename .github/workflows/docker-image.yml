@@ -32,5 +32,3 @@ jobs:
           # Optionally, you can also tag the image with a version (e.g., a tag or `latest`)
           docker tag ghcr.io/${{ github.repository_owner }}/caddy-dynu:${{ github.sha }} ghcr.io/${{ github.repository_owner }}/caddy-dynu:latest
           docker push ghcr.io/${{ github.repository_owner }}/caddy-dynu:latest
-        docker build -t $IMAGE_NAME .
-        docker push $IMAGE_NAME
