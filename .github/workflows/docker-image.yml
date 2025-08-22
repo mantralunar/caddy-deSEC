@@ -23,12 +23,12 @@ jobs:
       # Step 3: Build the Docker image
       - name: Build Docker image
         run: |
-          docker build -t ghcr.io/${{ github.repository_owner }}/caddy-dynu:${{ github.sha }} .
+          docker build -t ghcr.io/${{ github.repository_owner }}/caddy-desec:${{ github.sha }} .
 
       # Step 4: Push the Docker image to GitHub Container Registry
       - name: Push Docker image to GitHub Container Registry
         run: |
-          docker push ghcr.io/${{ github.repository_owner }}/caddy-dynu:${{ github.sha }}
+          docker push ghcr.io/${{ github.repository_owner }}/caddy-desec:${{ github.sha }}
           # Optionally, you can also tag the image with a version (e.g., a tag or `latest`)
-          docker tag ghcr.io/${{ github.repository_owner }}/caddy-dynu:${{ github.sha }} ghcr.io/${{ github.repository_owner }}/caddy-dynu:latest
-          docker push ghcr.io/${{ github.repository_owner }}/caddy-dynu:latest
+          docker tag ghcr.io/${{ github.repository_owner }}/caddy-desec:${{ github.sha }} ghcr.io/${{ github.repository_owner }}/caddy-desec:latest
+          docker push ghcr.io/${{ github.repository_owner }}/caddy-desec:latest
