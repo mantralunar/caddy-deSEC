@@ -1,4 +1,3 @@
-LABEL org.opencontainers.image.source https://github.com/mantralunar/caddy-dynu
 FROM caddy:builder-alpine AS builder
 
 RUN xcaddy build \
@@ -7,3 +6,4 @@ RUN xcaddy build \
 FROM caddy:alpine
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
+LABEL org.opencontainers.image.source https://github.com/mantralunar/caddy-dynu
