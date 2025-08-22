@@ -1,4 +1,4 @@
-name: Build and Push Docker Image to GitHub Container Registry
+name: Build caddy-dynu
 
 on:
   workflow_dispatch:  # Allows manual trigger via GitHub Actions UI
