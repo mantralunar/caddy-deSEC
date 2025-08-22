@@ -1,8 +1,8 @@
-FROM caddy:latest-builder AS builder
+FROM caddy:builder-alpine⁠ AS builder
 
 RUN xcaddy build \
     --with github.comhttps://github.com/caddy-dns/dynu
 
-FROM caddy:latest
+FROM caddy:alpine
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
